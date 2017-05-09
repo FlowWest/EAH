@@ -13,23 +13,22 @@ For EAH, there are a total of  7 scripts/modules.  You will only need to execute
 *	main script that invokes efm.py, lp.py, prob.py, area.py, and graph.py
 * mandatory script input parameters include:
   * hydrology file
-o	 geometry file
-o	 path of output directory
-o	 timing (start month, start day, end month, end day)
-o	 duration
-•	optional script input parameters include:
-o	species – species name label to output in EAH graph file
-o	verbose – Boolean field, if specified,  additional debug files are output in addition to regular script output files 
-o	 probability – Boolean field if specified, flow probability uses raw probability distribution as opposed to Log Pearson III 
-•	script output result files 
-o	CSV file with suffix ilp contains fully interpolated area , flow, probability data used to produce ADF Curve in EAH Graph file
-o	CSV file with suffix blp contains brief summary recurrence table of area, flow, probability at common recurrence intervals (1 yr, 2 yr, 5 yr, 10 yr, 50 yr, 200 yr)
-o	EAH Graph file
+  * geometry file
+  * path of output directory
+  * timing (start month, start day, end month, end day)
+  * duration
+* optional script input parameters include:
+  * species – species name label to output in EAH graph file
+  * verbose – Boolean field, if specified,  additional debug files are output in addition to regular script output files 
+  * probability – Boolean field if specified, flow probability uses raw probability distribution as opposed to Log Pearson III 
+* script output result files 
+  * CSV file with suffix ilp contains fully interpolated area , flow, probability data used to produce ADF Curve in EAH Graph file
+  * CSV file with suffix blp contains brief summary recurrence table of area, flow, probability at common recurrence intervals (1 yr, 2 yr, 5 yr, 10 yr, 50 yr, 200 yr)
+  * EAH Graph file
 
 2.	graph_select.py
 
-U:\Scripts\EAH\graph_select.py
-Purpose:
+##### Purpose:
 
 •	GUI tool that allows user to compare multiple EAH scenario result files located in specified target directory
 Execution:
