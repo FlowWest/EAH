@@ -30,38 +30,37 @@ For EAH, there are a total of  7 scripts/modules.  You will only need to execute
 
 ##### Purpose:
 
-•	GUI tool that allows user to compare multiple EAH scenario result files located in specified target directory
-Execution:
-a.	Change directory to location of EAH scripts:
-cd  “C:\Users\SLALONDE\Documents\Python Scripts\EAH>”
-b.	Enter command to start script:
-python graph_select.py
-You should see a new window should appear with title “EAH Graph Selector”.  
+* GUI tool that allows user to compare multiple EAH scenario result files located in specified target directory
+
+###### Execution:
+a.	Change directory to location of EAH scripts
+b.	Enter command to start script: `python graph_select.py`. You should see a new window should appear with title “EAH Graph Selector”.  
 c.	In EAH Graph Selector window, click on Select button.
 d.	Browse folders and select directory location which has the EAH files to compare
 e.	Click on checkboxes to select all applicable hydrology, geometry, duration, and timing parameters to be compared
 f.	Click on Apply button.
-•	script output result is new EAH graph file containing the combined selected parameters.  Graph files will be saved in the same directory as the directory chosen when clicking Select button 
+
+* script output result is new EAH graph file containing the combined selected parameters.  Graph files will be saved in the same directory as the directory chosen when clicking Select button 
 
 3.	efm.py
 
-•	script determines annual peak flows based on the constraints of the timing window and duration
+* script determines annual peak flows based on the constraints of the timing window and duration
 
 4.	lp.py
 
-•	 script calculates the log pearson distribution based on EFM script output (default method)
+* script calculates the log pearson distribution based on EFM script output (default method)
 
 5.	prob.py
 
-•	 script calculates the probability distribution based on EFM script output (override method)
+* script calculates the probability distribution based on EFM script output (override method)
 
 6.	area.py
 
-•	script calculates area duration frequency (ADF),  expected annual habitat (EAH) values, and recurrence interval tables based on flow distribution and flow to area tables  
+* script calculates area duration frequency (ADF),  expected annual habitat (EAH) values, and recurrence interval tables based on flow distribution and flow to area tables  
 
 7.	graph.py
 
-•	script generates ADF curve  based on area script output
+* script generates ADF curve  based on area script output
  
 YOLO BYPASS FOR AMERICAN RIVERS	
 Input Files
