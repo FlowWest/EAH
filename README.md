@@ -9,6 +9,7 @@ U:\Scripts\EAH\eah.py
 Need to execute from Willow
 
 Purpose:
+
 •	main script that invokes efm.py, lp.py, prob.py, area.py, and graph.py
 •	mandatory script input parameters include:
 o	 hydrology file
@@ -26,8 +27,10 @@ o	CSV file with suffix blp contains brief summary recurrence table of area, flow
 o	EAH Graph file
 
 2.	graph_select.py
+
 U:\Scripts\EAH\graph_select.py
 Purpose:
+
 •	GUI tool that allows user to compare multiple EAH scenario result files located in specified target directory
 Execution:
 a.	Change directory to location of EAH scripts:
