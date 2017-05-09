@@ -26,6 +26,8 @@ For EAH, there are a total of  7 scripts/modules.  You will only need to execute
   * CSV file with suffix blp contains brief summary recurrence table of area, flow, probability at common recurrence intervals (1 yr, 2 yr, 5 yr, 10 yr, 50 yr, 200 yr)
   * EAH Graph file
 
+***
+
 ### graph_select.py
 
 ##### Purpose:
@@ -47,106 +49,33 @@ f.	Click on Apply button.
 
 * script output result is new EAH graph file containing the combined selected parameters.  Graph files will be saved in the same directory as the directory chosen when clicking Select button 
 
+***
+
 ### efm.py
 
 * script determines annual peak flows based on the constraints of the timing window and duration
+
+***
 
 ### lp.py
 
 * script calculates the log pearson distribution based on EFM script output (default method)
 
+***
+
 ### prob.py
 
 * script calculates the probability distribution based on EFM script output (override method)
+
+***
 
 ### area.py
 
 * script calculates area duration frequency (ADF),  expected annual habitat (EAH) values, and recurrence interval tables based on flow distribution and flow to area tables  
 
+***
+
 ### graph.py
 
 * script generates ADF curve  based on area script output
- 
-YOLO BYPASS FOR AMERICAN RIVERS	
-Input Files
-Directory with Input Hydrology and Geometry Files
-Z:\Projects\Yolo Bypass\Alternatives\EAH Inputs
-Hydrology CSV Files:  YoloBypassBaseline, YoloBypassNotch, YoloBypassNotchFeb15, YoloBypassNotchMarch1, YoloBypassNotchMarch15, YoloBypassNotchMarch31, YoloBypassNotchApril15, YoloBypassNotchMay1, YoloBypassNotchMay15
-Geometry/FTA CSV Files:  sac_fta, sac_fta_depth_1feet
-Raw Verona Gage Data File
-Z:\Projects\Yolo Bypass\Alternatives\EAH Inputs\Gage\Verona_USGS_Daily_Discharge.xlsx
-Modelling Spreadsheet
-Z:\Projects\Yolo Bypass\Alternatives\20140904 YoloBypassInflowCalcs.xlsx
-Methodology Outline
-..\Yolo Bypass\Yolo Bypass Hydrology Spreadsheet Notes.docx
-Script Execution
-To run all scenarios: 
-a.	From Windows Start Menu on Seth’s machine, type “cmd” in textbox labeled “Search programs and files”
-b.	In DOS window, type yolowrap.bat and hit Enter 
-Results will be saved in the following directory ..\Yolo Bypass\Scenario Runs\20140908
-Results
-Summary of All Scenario Results 
-Z:\Projects\Yolo Bypass\Alternatives\EAH Results\20140827 YoloBypassResultSummary.xlsx
-Powerpoint Slides for 9/3/14 Meeting
-Z:\Projects\Yolo Bypass\Alternatives\EAH Results\140902Yolo_MT.pptx
-Directory with Individual Result Files
-..\Yolo Bypass\Scenario Runs\20140826
-CVFPP San Joaquin Dos Rios/Three Amigos
-Input Files
-Directory with Input Hydrology and Geometry Files
-Z:\Projects\CVFPP Phase 2\LSJR Analysis\EAH\Dos Rios Three Amigos\Inputs
-Hydrology CSV Files:  SJRhydrology1940, SJRandTLRhydrology1940, TLRhydrology1940
-Geometry/FTA CSV Files:  DosRiosSJRbaseline, DosRiosSJRalternative, ThreeAmigosSJRbaseline, ThreeAmigosSJRalternative, ThreeAmigosSJRandTLRbaseline, ThreeAmigosSJRandTLRalternative
-Raw Gage Data Files
-Z:\Projects\CVFPP Phase 2\LSJR Analysis\EAH\Dos Rios Three Amigos\Inputs\Gage\sanjoaquin_newman_raw_usgs.txt
-Z:\Projects\CVFPP Phase 2\LSJR Analysis\EAH\Dos Rios Three Amigos\Inputs\Gage\tulomne_merced_raw_usgs.txt
-Script Execution
-1)	Create new FTA csv files based on hydraulic model FTA tables provided by Devinder at DWR.  Confirm with Mark whether any scenario requires only using Tulomne River hydrology.
-2)	Create output directory for the model run 
-a.	mkdir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908"
-3)	Change directory to location of EAH script
-a.	cd  “C:\Users\SLALONDE\Documents\Python Scripts\EAH>”
-4)	Execute EAH scripts for Dos Rios breach sites using SJR hydrology
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\DosRiosSJRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\DosRiosSJRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\DosRiosSJRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 11 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\DosRiosSJRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 11 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\DosRiosSJRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 21 -emo 7 -eda 7 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\DosRiosSJRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 21 -emo 7 -eda 7 -durations 7 10
-5)	Execute EAH scripts for Three Amigos breach sites using SJR hydrology
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 11 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 11 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 21 -emo 7 -eda 7 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 21 -emo 7 -eda 7 -durations 7 10
-
-6)	Execute EAH scripts for Three Amigos breach sites using combined SJR and TLR hydrology
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRandTLRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRandTLRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRandTLRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRandTLRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRandTLRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRandTLRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 11 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRandTLRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRandTLRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 11 -sda 1 -emo 6 -eda 15 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRandTLRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRbaseline.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 21 -emo 7 -eda 7 -durations 7 10
-C:\Users\SLALONDE\Documents\Python Scripts\EAH>python eah.py -hfile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\SJRandTLRhydrology1940.csv" -afile "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\ThreeAmigosSJRandTLRalternative.csv" -odir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908" -smo 1 -sda 21 -emo 7 -eda 7 -durations 7 10
-
-Result Files
-Summary of All Scenario Results 
-Z:\Projects\CVFPP Phase 2\LSJR Analysis\EAH\Dos Rios Three Amigos\Results\20140825_DosRios_ThreeAmigos_EAH_Summary.xlsx
-Directory with Individual Result Files
-..\CVFPP\SJR\Dos Rios_3 Amigos\20140825
- 
-
-CVFPP San Joaquin Firebaugh
-Input Files
-Directory with Input Hydrology and Geometry Files
-Z:\Projects\CVFPP Phase 2\LSJR Analysis\EAH\Firebaugh\Inputs
-Hydrology CSV Files:  MendotaModel, MendotaHistorical
-Geometry/FTA CSV Files:  Eco1Baseline, Eco1Alternative, Eco2Baseline, Eco2Alternative, Eco3Baseline, Eco3Alternative, Eco4Baseline, Eco4Alternative, Eco5Baseline, Eco5Alternative, Eco6Baseline, Eco6Alternative
-Script Execution
-1)	Confirm with Mark what scenarios require rerunning.
-2)	Create output directory for the model run 
-a.	mkdir "C:\Users\SLALONDE\Documents\CVFPP\SJR\Dos Rios_3 Amigos\20140908"
-3)	Change directory to location of EAH script
-a.	cd  “C:\Users\SLALONDE\Documents\Python Scripts\EAH>”
-4)	Execute EAH scripts for Dos Rios breach sites using SJR hydrology
 
