@@ -1,12 +1,12 @@
 # EAH
 
-### Disclaimer: 
+## Disclaimer: 
 This code was developed by FlowWest, LLC with some funding provider by American Rivers. We have not updated or maintained this code since August 2014. Use of this code is “at your own risk” and FlowWest, LLC is not responsible for the results of any analyses conducted using this code or any derivatives of this code. FlowWest could support use of this code through a contract with any entity requiring implementation support or further code development. Any changes to this code must be posted to GitHub so that FlowWest, LLC can continue to refine and improve the code as future needs arise.
 
-### SCRIPTS
+## SCRIPTS
 For EAH, there are a total of  7 scripts/modules.  You will only need to execute eah.py and  graph_select.py.
 
-1.	eah.py 
+**1.	eah.py** 
 
 ##### Purpose:
 
@@ -44,14 +44,23 @@ f.	Click on Apply button.
 •	script output result is new EAH graph file containing the combined selected parameters.  Graph files will be saved in the same directory as the directory chosen when clicking Select button 
 
 3.	efm.py
+
 •	script determines annual peak flows based on the constraints of the timing window and duration
+
 4.	lp.py
+
 •	 script calculates the log pearson distribution based on EFM script output (default method)
+
 5.	prob.py
+
 •	 script calculates the probability distribution based on EFM script output (override method)
+
 6.	area.py
+
 •	script calculates area duration frequency (ADF),  expected annual habitat (EAH) values, and recurrence interval tables based on flow distribution and flow to area tables  
+
 7.	graph.py
+
 •	script generates ADF curve  based on area script output
  
 YOLO BYPASS FOR AMERICAN RIVERS	
