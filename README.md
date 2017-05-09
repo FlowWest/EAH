@@ -1,5 +1,8 @@
 # EAH
 
+### Disclaimer: 
+This code was developed by FlowWest, LLC with some funding provider by American Rivers. We have not updated or maintained this code since August 2014. Use of this code is “at your own risk” and FlowWest, LLC is not responsible for the results of any analyses conducted using this code or any derivatives of this code. FlowWest could support use of this code through a contract with any entity requiring implementation support or further code development. Any changes to this code must be posted to GitHub so that FlowWest, LLC can continue to refine and improve the code as future needs arise.
+
 SCRIPTS
 For EAH, there are a total of  7 scripts/modules.  You will only need to execute eah.py and  graph_select.py.  You should be able to execute all scripts on the server.
 
