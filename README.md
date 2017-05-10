@@ -1,7 +1,11 @@
 # EAH
 
 ## Disclaimer: 
-This code was developed by FlowWest, LLC with some funding provider by American Rivers. We have not updated or maintained this code since August 2014. Use of this code is “at your own risk” and FlowWest, LLC is not responsible for the results of any analyses conducted using this code or any derivatives of this code. FlowWest could support use of this code through a contract with any entity requiring implementation support or further code development. Any changes to this code must be posted to GitHub so that FlowWest, LLC can continue to refine and improve the code as future needs arise.
+Software and scripts developed by FlowWest, LLC are provided "AS IS" without any warranty or support. FlowWest, LLC assumes no responsibility or liability for the use of the software or scripts, and conveys no license or title under any patent or copyright right to the product. FlowWest, LLC reserves the right to make changes to the software or scripts without notification.
+
+The EAH python scripts were developed by FlowWest, LLC with partial funding provided by American Rivers. FlowWest, LLC has not updated or maintained the EAH python scripts since August 2014. FlowWest, LLC could provide support, customization, or further development of the EAH python scripts through a contract with any entity requiring such support.
+
+FlowWest, LLC requests that any changes to the EAH python scripts be posted to GitHub so that FlowWest, LLC can build on any improvements as future needs arise.
 
 ## SCRIPTS
 For EAH, there are a total of  7 scripts/modules.  You will only need to execute eah.py and  graph_select.py.
